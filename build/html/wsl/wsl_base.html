@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WSL安装 &mdash; 经验 - 环境搭建 v0.0.1 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/my_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="WSL环境配置" href="wsl_env.html" />
+    <link rel="prev" title="WSL" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 经验 - 环境搭建
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">WSL</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">WSL安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wsl_env.html">WSL环境配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wsl_aux.html">1.3 安装utools</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">经验 - 环境搭建</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">WSL</a> &raquo;</li>
+      <li>WSL安装</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/wsl/wsl_base.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wsl">
+<h1>WSL安装<a class="headerlink" href="#wsl" title="永久链接至标题"></a></h1>
+<section id="wsl-ubuntu18-04">
+<h2>1 安装wsl Ubuntu18.04<a class="headerlink" href="#wsl-ubuntu18-04" title="永久链接至标题"></a></h2>
+<figure class="align-default">
+<img alt="../_images/install_ubuntu.png" src="../_images/install_ubuntu.png" />
+</figure>
+</section>
+<section id="terminal">
+<h2>2 安装terminal<a class="headerlink" href="#terminal" title="永久链接至标题"></a></h2>
+<p>安装好terminal后, 运行terminal会进入到wsl安装页面, 安装后最终效果如下</p>
+<figure class="align-default">
+<img alt="../_images/install_terminall.png" src="../_images/install_terminall.png" />
+</figure>
+<figure class="align-default">
+<img alt="../_images/wsl_ui.png" src="../_images/wsl_ui.png" />
+</figure>
+</section>
+<section id="wsl1wsl2">
+<h2>3 wsl1升级wsl2<a class="headerlink" href="#wsl1wsl2" title="永久链接至标题"></a></h2>
+<p>wsl2比wsl1的内核更完整，因此推荐更新到wsl2，升级wsl2需要先升级win10的wsl2支持包，下载安装后需要重启系统。</p>
+<ul class="simple">
+<li><p>win10支持wsl2链接：<a class="reference external" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi</a></p></li>
+<li><p>在power shell 输入如下命令升级wsl1为wsl2</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">version</span> <span class="n">Ubuntu</span><span class="o">-</span><span class="mf">18.04</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../_images/switch_wsl2.png" src="../_images/switch_wsl2.png" />
+</figure>
+</section>
+<section id="wsl2">
+<h2>4 wsl2迁移<a class="headerlink" href="#wsl2" title="永久链接至标题"></a></h2>
+<p>wsl默认安装在C盘, 为了避免C盘爆盘，因此需要将wsl安装到其他盘符下，这里以E盘为例</p>
+<ul class="simple">
+<li><p>安装迁移工具：<a class="reference external" href="https://github.com/DDoSolitary/LxRunOffline/releases">https://github.com/DDoSolitary/LxRunOffline/releases</a></p></li>
+</ul>
+<figure class="align-default">
+<img alt="../_images/wsl_transfer.png" src="../_images/wsl_transfer.png" />
+</figure>
+<ul class="simple">
+<li><p>解压后在该工具所在目录执行如下命令</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 迁移到目标地址：-n指定WSL，-d指定目标地址</span>
+<span class="o">.</span>\<span class="n">LxRunOffline</span><span class="o">.</span><span class="n">exe</span> <span class="n">move</span> <span class="o">-</span><span class="n">n</span> <span class="n">Ubuntu</span><span class="o">-</span><span class="mf">18.04</span> <span class="o">-</span><span class="n">d</span> <span class="n">E</span><span class="p">:</span>\<span class="n">wsl</span>
+
+<span class="c1"># 查看迁移后的地址，观察是否迁移成功</span>
+<span class="o">.</span>\<span class="n">LxRunOffline</span><span class="o">.</span><span class="n">exe</span> <span class="n">get</span><span class="o">-</span><span class="nb">dir</span> <span class="o">-</span><span class="n">n</span> <span class="n">Ubuntu</span><span class="o">-</span><span class="mf">18.04</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="WSL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="wsl_env.html" class="btn btn-neutral float-right" title="WSL环境配置" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 子午.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
